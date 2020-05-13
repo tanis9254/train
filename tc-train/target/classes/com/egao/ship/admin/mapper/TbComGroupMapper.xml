@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.egao.ship.admin.mapper.TbComGroupMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.egao.ship.admin.entity.TbComGroup">
+        <id column="id" property="id" />
+        <result column="com_group_name" property="comGroupName" />
+        <result column="com_status" property="comStatus" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, com_group_name, com_status
+    </sql>
+
+</mapper>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.egao.ship.admin.mapper.ViscosityMonitorParaMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.egao.ship.admin.entity.ViscosityMonitorPara">
+        <id column="id" property="id" />
+        <result column="Viscosity" property="Viscosity" />
+        <result column="Density" property="Density" />
+        <result column="DielectricConstant" property="DielectricConstant" />
+        <result column="Temperature" property="Temperature" />
+        <result column="Waterppm" property="Waterppm" />
+        <result column="DynamicViscosity" property="DynamicViscosity" />
+        <result column="device_id" property="deviceId" />
+        <result column="gather_time" property="gatherTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        Viscosity, Density, DielectricConstant, Temperature, Waterppm, DynamicViscosity, id, device_id, gather_time
+    </sql>
+
+</mapper>

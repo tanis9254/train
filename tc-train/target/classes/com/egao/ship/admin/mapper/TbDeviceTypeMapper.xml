@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.egao.ship.admin.mapper.TbDeviceTypeMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.egao.ship.admin.entity.TbDeviceType">
+        <id column="device_type_id" property="deviceTypeId" />
+        <result column="ship_id" property="shipId" />
+        <result column="device_type_name" property="deviceTypeName" />
+        <result column="comments" property="comments" />
+        <result column="attributes" property="attributes" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        device_type_id, ship_id, device_type_name, comments, attributes, create_time, update_time
+    </sql>
+
+</mapper>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.egao.ship.admin.mapper.TbShipDeviceMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.egao.ship.admin.entity.TbShipDevice">
+        <id column="device_id" property="deviceId" />
+        <result column="ship_id" property="shipId" />
+        <result column="device_name" property="deviceName" />
+        <result column="device_type_id" property="deviceTypeId" />
+        <result column="serial_port" property="serialPort" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="T" property="t" />
+        <result column="P" property="p" />
+        <result column="P40" property="p40" />
+        <result column="C" property="c" />
+        <result column="C40" property="c40" />
+        <result column="RH" property="rh" />
+        <result column="RH20" property="rh20" />
+        <result column="TMean" property="TMean" />
+        <result column="PCBT" property="pcbt" />
+        <result column="RULT" property="rult" />
+        <result column="RULLG" property="rullg" />
+        <result column="RUL" property="rul" />
+        <result column="APP40" property="app40" />
+        <result column="APC40" property="apc40" />
+        <result column="AP" property="ap" />
+        <result column="FB" property="fb" />
+        <result column="OAge" property="OAge" />
+        <result column="ERC" property="erc" />
+        <result column="CRC" property="crc" />
+        <result column="ISO4um" property="ISO4um" />
+        <result column="ISO6um" property="ISO6um" />
+        <result column="ISO14um" property="ISO14um" />
+        <result column="ISO21um" property="ISO21um" />
+        <result column="SAE4um" property="SAE4um" />
+        <result column="SAE6um" property="SAE6um" />
+        <result column="SAE14um" property="SAE14um" />
+        <result column="SAE21um" property="SAE21um" />
+        <result column="NAS" property="nas" />
+        <result column="GOST" property="gost" />
+        <result column="Conc4um" property="Conc4um" />
+        <result column="Conc6um" property="Conc6um" />
+        <result column="Conc14um" property="Conc14um" />
+        <result column="Conc21um" property="Conc21um" />
+        <result column="FIndex" property="FIndex" />
+        <result column="MTime" property="MTime" />
+        <result column="Viscosity" property="Viscosity" />
+        <result column="Density" property="Density" />
+        <result column="DielectricConstant" property="DielectricConstant" />
+        <result column="Temperature" property="Temperature" />
+        <result column="Waterppm" property="Waterppm" />
+        <result column="DynamicViscosity" property="DynamicViscosity" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        device_id, ship_id, device_name, device_type_id, serial_port, create_time, update_time, T, P, P40, C, C40, RH, RH20, TMean, PCBT, RULT, RULLG, RUL, APP40, APC40, AP, FB, OAge, ERC, CRC, ISO4um, ISO6um, ISO14um, ISO21um, SAE4um, SAE6um, SAE14um, SAE21um, NAS, GOST, Conc4um, Conc6um, Conc14um, Conc21um, FIndex, MTime, Viscosity, Density, DielectricConstant, Temperature, Waterppm, DynamicViscosity
+    </sql>
+
+</mapper>

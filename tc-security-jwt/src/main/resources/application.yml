@@ -1,0 +1,68 @@
+server:
+  port: 31300
+
+  servlet:
+    context-path: /
+
+  application:
+    name: ppt
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    #    url: jdbc:mysql://192.168.20.44:3306/ppt-gscs?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2B8
+    url: jdbc:mysql://localhost:3306/securityJwt?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 1
+    testWhileIdle: true
+    testOnBorrow: true
+    testOnReturn: true
+    poolPreparedStatements: true
+    ################################################datasource:mongodb
+  redis:
+    host: localhost
+    port: 6379
+    timeout: 7200
+    database: 9
+
+  resources:
+    static-locations: classpath:/static/,classpath:/static-fat/
+
+
+#######################################datasource:mysql:mybatis-plus
+mybatis-plus:
+  mapperLocations: classpath*:com/tangxi/security/**/mapper/*Mapper.xml
+  #刷新mapper 调试神器
+  refresh-mapper: true
+  #实体扫描，多个package用逗号或者分号分隔
+  typeAliasesPackage: com.tangxi.security.entity.**
+  #mybatis-plus.type-enums-package=com.rsy.rxf.po.*.enums
+  #主键类型  0:"数据库ID自增", 1:"用户输入ID",2:"全局唯一ID (数字类型唯一ID)", 3:"全局唯一ID UUID";
+  global-config:
+    db-config:
+      id-type: id_worker
+      table-underline: true
+
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+jwt:
+  config:
+    key: tangxi
+    ttl: 36000000
+
+##################################################LOG
+logging:
+  config: classpath:logback-spring.xml
+  file:
+    path: ../logs/ppt-web
+#  level:
+#    com.rsy.ppt.business: debug
