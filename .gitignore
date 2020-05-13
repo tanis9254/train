@@ -24,6 +24,12 @@ HELP.md
 /nbdist/
 /.nb-gradle/
 /build/
+/logs/
 
 ### VS Code ###
 .vscode/
+*/target/
+
+### rebel ###
+rebel.*
+.rebel.*.*
