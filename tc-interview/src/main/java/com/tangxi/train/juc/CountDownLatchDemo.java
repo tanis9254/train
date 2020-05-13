@@ -21,7 +21,7 @@ public class CountDownLatchDemo {
             threads.add(new Thread(() -> {
                 System.out.println(Thread.currentThread().getName() + "阅卷完成");
                 // 每位老师阅卷完成后，就让计数器减1
-                countDownLatch.countDown();
+                //countDownLatch.countDown();
             }, teachers.get(i)));
         }
         for (Thread thread : threads) {
