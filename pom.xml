@@ -20,6 +20,7 @@
         <module>tc-train</module>
         <module>tc-security-jwt</module>
         <module>tc-interview</module>
+        <module>tc-rocketmq</module>
     </modules>
 
     <properties>
