@@ -58,6 +58,6 @@ public class Consumer {
         });
 
         consumer.start();
-        System.out.println("消费者 启动成功=======");
+        System.out.println("消费者 启动成功========");
     }
 }
