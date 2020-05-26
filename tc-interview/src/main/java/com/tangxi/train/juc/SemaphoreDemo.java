@@ -12,6 +12,8 @@ public class SemaphoreDemo {
     public static void main(String[] args) {
         //模拟3个停车位
         Semaphore semaphore = new Semaphore(3);
+        //冷知识：初始化就释放许可，可以增加一个许可
+        //semaphore.release();
         // 模拟6部汽车
         for (int i = 1; i <= 6; i++) {
             new Thread(() -> {
