@@ -8,6 +8,7 @@ import lombok.Getter;
  * @description:
  */
 public enum CountryEnum {
+    
     ONE(1, "齐"),
     TWO(2, "楚"),
     THREE(3, "燕"),
