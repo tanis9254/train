@@ -22,6 +22,7 @@
         <module>tc-interview</module>
         <module>tc-rocketmq</module>
         <module>tc-sharding-jdbc</module>
+        <module>tc-platform</module>
     </modules>
 
     <properties>
@@ -47,10 +48,30 @@
         <camel-ftp.version>2.13.2</camel-ftp.version>
         <rocketmq-client.version>4.7.0</rocketmq-client.version>
         <sharding-jdbc-core.version>1.5.4</sharding-jdbc-core.version>
+        <rocketmq.version>2.0.2</rocketmq.version>
+        <spring-cloud.version>Hoxton.SR5</spring-cloud.version>
+        <commons-io>2.6</commons-io>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+
+            <!--spring cloud-->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <!-- SpringBoot 2.2.x 以上版本这样配置 -->
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!--spring cloud-->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-openfeign</artifactId>
+                <version>${spring-cloud.version}</version>
+            </dependency>
+
             <!--spring boot-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -160,6 +181,11 @@
                 <artifactId>rocketmq-client</artifactId>
                 <version>${rocketmq-client.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.apache.rocketmq</groupId>
+                <artifactId>rocketmq-spring-boot-starter</artifactId>
+                <version>${rocketmq.version}</version>
+            </dependency>
             <!--rocketmq-->
 
             <!--sharding-jdbc-->
@@ -182,6 +208,11 @@
                 <version>${swagger.version}</version>
             </dependency>
             <!--swagger-->
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${commons-io}</version>
+            </dependency>
         </dependencies>
 
     </dependencyManagement>
