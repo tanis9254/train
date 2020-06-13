@@ -1,5 +1,6 @@
 package com.tangxi.train.juc;
 
+
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -46,7 +47,7 @@ public class CountDownLatchDemo {
             new Thread(() -> {
                 System.out.println(Thread.currentThread().getName() + "\t" + "国,灭亡");
                 countDownLatch.countDown();
-            }, CountryEnum.forEach(i).getName()).start();
+            }, com.tangxi.train.juc.CountryEnum.forEach(i).getName()).start();
         }
         countDownLatch.await();
         System.out.println("秦统一六国");

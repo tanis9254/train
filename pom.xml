@@ -23,6 +23,7 @@
         <module>tc-rocketmq</module>
         <module>tc-sharding-jdbc</module>
         <module>tc-platform</module>
+        <module>tc-idempotent</module>
     </modules>
 
     <properties>
