@@ -31,7 +31,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <rxf-version>DEV-SNAPSHOT</rxf-version>
-        <spring-boot-version>2.2.0.RELEASE</spring-boot-version>
+        <spring-boot-version>2.5.12</spring-boot-version>
         <mybatis.starter.version>1.3.2</mybatis.starter.version>
         <fastjson.version>1.2.62</fastjson.version>
         <mysql.driver.version>6.0.6</mysql.driver.version>
